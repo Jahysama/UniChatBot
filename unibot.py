@@ -38,7 +38,7 @@ def get_parser_args():
         "--response",
         default=10.0,
         type=float,
-        help="How often bot would check chat and respond in seconds.")
+        help="How often bot would check chat and respond in seconds")
 
     args = parser.parse_args()
     return args
@@ -172,3 +172,4 @@ if __name__ == '__main__':
         phrase = gen_text
         paste(gen_text)
         pyautogui.press('Enter')  # send a response
+        pyautogui.hotkey('ctrl', 'Enter')  # send a response
