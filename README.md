@@ -23,7 +23,7 @@ pip install -r requirements.txt
 ```
 python unibot.py --lang en
 ```
-#### Firstly will download a chosen model.
+#### Firstly it will download a chosen model.
 #### After downloading it will ask you to select the source of input data.
 #### Just right-click the last message in your messanger.
 #### Then left-click on the input panel of your messanger to select the bot output.
