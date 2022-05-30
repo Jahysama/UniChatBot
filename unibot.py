@@ -6,6 +6,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from pynput.mouse import Listener
 import argparse
+import platform
 
 
 def get_parser_args():
@@ -70,7 +71,10 @@ def on_click_pos(x, y, button, pressed):  # preparing input/output sources
 
 def paste(text: str):  # func for text pasting
     pyperclip.copy(text)
-    pyautogui.hotkey("ctrl", "v")
+    if platform.system() == "Darwin":
+        pyautogui.hotkey("command", "v")
+    else:
+        pyautogui.hotkey("ctrl", "v")
 
 
 def get_length_param(text: str) -> str:  # input str size in tokens
