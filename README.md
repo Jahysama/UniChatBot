@@ -39,8 +39,8 @@ python unibot.py --lang en
 |     --lang     |                      Bot model language                      | en/ru  |
 |    --memory    |            How many messages should bot remember.            |  int   |
 | --max-mess-len |                Max message length in symbols.                |  int   |
-| --temperature  | The more is temperature the more nonsense bot will generate. |  int   |
-|   --response   |    How often bot would check chat and respond in seconds     |  int   |
+| --temperature  | The more is temperature the more nonsense bot will generate. |  float |
+|   --response   |    How often bot would check chat and respond in seconds     |  float |
 
 
 ## License
