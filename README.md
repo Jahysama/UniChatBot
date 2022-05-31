@@ -25,8 +25,8 @@ python unibot.py --lang en
 ```
 #### Firstly it will download a chosen model.
 #### After downloading it will ask you to select the source of input data.
-#### Just right-click the last message in your messanger.
-#### Then left-click on the input panel of your messanger to select the bot output.
+#### Just right-click the last message in your messenger.
+#### Then left-click on the input panel of your messenger to select the bot output.
 
 ### Here is a quick demo below for DISCORD:
 
