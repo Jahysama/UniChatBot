@@ -59,7 +59,7 @@ def on_click_pos(x, y, button, pressed):  # preparing input/output sources
     if button == pynput.mouse.Button.right:
         pos = (x, y)
         print(f"Input point was set to {pos}")
-        print("Please left click from where bot should get input data")
+        print("Please right click where bot should paste output data")
         right_pressed = True
 
     elif button == pynput.mouse.Button.left and right_pressed:
@@ -104,7 +104,7 @@ if __name__ == '__main__':
     tokenizer = AutoTokenizer.from_pretrained(model_dict[args.lang])
     model = AutoModelForCausalLM.from_pretrained(model_dict[args.lang])
 
-    print("Please right click from where bot should get input data")
+    print("Please left click from where bot should get input data")
     with Listener(on_click=on_click_pos) as listener:
         listener.join()
 
@@ -121,8 +121,7 @@ if __name__ == '__main__':
             return pyperclip.paste()
 
 
-        # double clicks on a position of the cursor
-        pyautogui.doubleClick(pos)
+        # double clicks on a position of the cursor to select all message
         pyautogui.doubleClick(pos)
         pyautogui.doubleClick(pos)
 
@@ -167,8 +166,7 @@ if __name__ == '__main__':
         if step >= args.memory:  # reset memory
             step = 0
 
-        # double clicks on a position of the cursor
-        pyautogui.doubleClick(pos2)
+        # double clicks on a position of the cursor to paste text
         pyautogui.doubleClick(pos2)
 
         gen_text = f'{tokenizer.decode(chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)}'  # generate a response
