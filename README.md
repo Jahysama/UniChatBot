@@ -6,6 +6,11 @@
 conda create -n unichatbot_env python=3.6
 conda activate unichatbot_env
 ```
+- clone the repo and cd into it
+```
+git clone https://github.com/Jahysama/UniChatBot
+cd UniChatBot
+```
 - python packages
 ```
 pip install -r requirements.txt
